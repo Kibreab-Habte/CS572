@@ -20,7 +20,7 @@ let checkSystem = ()=>{
 checkSystem().subscribe(data => {
     console.log('Checking your system...')
     if(data.numOfCores < 2){
-        console.log("Processor is not supported")
+        console.log("Processor is not supported1")
     }else if(data.ramSize < 4){
         console.log('This app needs at least 4 GB of RAM')
     }else {
