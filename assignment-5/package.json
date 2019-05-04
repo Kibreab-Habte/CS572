@@ -1,0 +1,17 @@
+{
+  "name": "assignment-5",
+  "version": "1.0.0",
+  "description": "check system memory size and processor",
+  "main": "question1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kibreab Habte",
+  "license": "ISC",
+  "dependencies": {
+    "rxjs": "^6.5.1",
+    "axios": "^0.18.0",
+    "express": "^4.16.4"
+  },
+  "keywords": []
+}
