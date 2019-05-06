@@ -15,5 +15,8 @@
     "morgan": "^1.9.1",
     "rxjs": "^6.5.1"
   },
-  "keywords": []
+  "keywords": [],
+  "devDependencies": {
+    "jshint": "^2.10.2"
+  }
 }
