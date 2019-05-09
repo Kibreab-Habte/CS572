@@ -1,0 +1,49 @@
+                                        
+====================================================================================================
+                                        NoSQL Schema Design
+==================================================================================================
+
+
+Schema design for library management application
+
+Collections
+
+The library management application has the following collections:
+
+1.	Books
+2.	Students
+3.	Author
+
+
+We embeded by assuming that the number of copies of a given book is few.
+
+Embedded Book model:
+
+{
+    ISBN : String.
+    title : String,
+    authors : [ {
+        firstName : String,
+        lastNamr : String
+    }],
+    tags : [String],
+    availableCopies : [String],
+    lentCopies :[{
+        copyId : String,
+        returnDate : Date,
+        student : {
+            studId : String,
+            firstName : String,
+            lastName : String,
+            address : {
+                street : String,
+                city : String,
+                state : String
+            },
+            contact : {
+                email : String,
+                telephone : String
+            }
+        }
+    }]
+}
