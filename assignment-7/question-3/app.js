@@ -12,11 +12,13 @@ app.use(express.json());
 
 app.get('/', (req, res) => res.send('Connected, I am at home'));
 
-app.get('/api/lectures', (req, res, next) => {
-    lecRoute(client, req, res, next);
+ app.use('/api/lectures', (req, res, next) => {
+     lecRoute(client, req, res, next);
 });
 
-app.use((err, req, re, next) => {
+//app.use('/api/lectures',require("./route/lectures"))
+
+app.use((err, req, res, next) => {
 
     console.log(err);
     res.status(err.status || 500).send(err.message);
@@ -34,7 +36,7 @@ function connectToDb(){
                 client.close()
                 console.log(err.message)
             })
-}
+        }
 
 process.on('exit', (d) => {
     console.log(d);

@@ -10,7 +10,7 @@ function parRequest(client, req, res, next) {
 
 router.get('/', (req, res, next) => {
     collection.find({}).toArray((err, data) => res.send(data));
-})
+});
 
 router.get('/search/:lec', (req, res, next) => {
     const lec = req.params.lec;
